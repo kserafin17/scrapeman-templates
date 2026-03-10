@@ -12,13 +12,16 @@
       "config": {
         "blockSelector": "[data-component-type='s-search-result']",
         "fields": [
-          { "name": "Title",   "type": "text",   "required": true,  "selector": "h2 .a-text-normal",             "confidence": 92 },
-          { "name": "Price",   "type": "text",   "required": false, "selector": ".a-price .a-offscreen",          "confidence": 88 },
-          { "name": "Rating",  "type": "text",   "required": false, "selector": ".a-icon-alt",                    "confidence": 83 },
-          { "name": "Reviews", "type": "number", "required": false, "selector": ".a-size-base.s-underline-text",  "confidence": 78 },
-          { "name": "Image",   "type": "image",  "required": false, "selector": ".s-image",                       "confidence": 91 },
-          { "name": "Link",    "type": "link",   "required": false, "selector": "h2 a",                           "confidence": 95 }
+          { "name": "Title",   "type": "text",   "required": true,  "selector": "h2 .a-text-normal",             "blockRepSel": "[data-component-type='s-search-result']", "confidence": 92 },
+          { "name": "Price",   "type": "text",   "required": false, "selector": ".a-price .a-offscreen",         "blockRepSel": "[data-component-type='s-search-result']", "confidence": 88 },
+          { "name": "Rating",  "type": "text",   "required": false, "selector": ".a-icon-alt",                   "blockRepSel": "[data-component-type='s-search-result']", "confidence": 83 },
+          { "name": "Reviews", "type": "number", "required": false, "selector": ".a-size-base.s-underline-text", "blockRepSel": "[data-component-type='s-search-result']", "confidence": 78 },
+          { "name": "Image",   "type": "image",  "required": false, "selector": ".s-image",                      "blockRepSel": "[data-component-type='s-search-result']", "confidence": 91 },
+          { "name": "Link",    "type": "link",   "required": false, "selector": "h2 a",                          "blockRepSel": "[data-component-type='s-search-result']", "confidence": 95 }
         ],
+        "paginationType": "next-page",
+        "paginationSelector": ".s-pagination-next",
+        "paginationText": "Next",
         "maxPages": 5,
         "delayMin": 3,
         "delayMax": 6
